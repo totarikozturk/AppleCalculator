@@ -37,13 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D0327857283C3904008AB105 /* file */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = file;
-			sourceTree = "<group>";
-		};
 		D0B2AB77283BA1CF00140F1D = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +56,6 @@
 		D0B2AB82283BA1CF00140F1D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				D0327857283C3904008AB105 /* file */,
 				D0B2AB83283BA1CF00140F1D /* AppDelegate.swift */,
 				D0B2AB85283BA1CF00140F1D /* SceneDelegate.swift */,
 				D0B2AB87283BA1CF00140F1D /* ViewController.swift */,
