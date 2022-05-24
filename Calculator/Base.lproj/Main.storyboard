@@ -356,6 +356,30 @@
                         </constraints>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                     </view>
+                    <connections>
+                        <outlet property="ACandClearButton" destination="L17-3o-TYb" id="7Yu-vm-0RZ"/>
+                        <outlet property="ResultLabel" destination="ikj-nC-0Jt" id="dOP-Ky-6jd"/>
+                        <outlet property="commaButton" destination="vju-xc-E0H" id="fc2-iP-17i"/>
+                        <outlet property="divideButton" destination="fWa-hO-dLd" id="U8N-Ir-gQa"/>
+                        <outlet property="eightButton" destination="EgO-GE-qp6" id="nI3-kd-lsi"/>
+                        <outlet property="emptyLabel" destination="GcH-nI-MaT" id="CoF-mN-TCw"/>
+                        <outlet property="emptyLabel2" destination="GyB-KZ-w6U" id="0a4-2A-PEI"/>
+                        <outlet property="equalButton" destination="9Zn-1H-DXk" id="jSD-t9-X6l"/>
+                        <outlet property="fiveButton" destination="MAn-ak-pQK" id="gfN-if-JGp"/>
+                        <outlet property="fourButton" destination="U0O-b9-WtV" id="rgo-Sx-BEK"/>
+                        <outlet property="minusButton" destination="16E-90-Fpb" id="Uj0-cN-uLO"/>
+                        <outlet property="multipleButton" destination="WeL-zD-HMo" id="AoT-oa-x1t"/>
+                        <outlet property="nineButton" destination="EPx-GP-0WG" id="mtA-Uz-lZU"/>
+                        <outlet property="oneButton" destination="cTt-Ty-1sg" id="Vlz-xX-HBB"/>
+                        <outlet property="percentButton" destination="2lr-Po-9pg" id="VEx-J4-ONn"/>
+                        <outlet property="plusButton" destination="ng7-aQ-3Zj" id="1Vb-EW-qkg"/>
+                        <outlet property="plusMinusButton" destination="rYT-wm-e29" id="606-t4-aIU"/>
+                        <outlet property="sevenButton" destination="hVX-dI-hIw" id="slC-h0-egv"/>
+                        <outlet property="sixButton" destination="G0n-8q-PS4" id="pbU-c5-IS5"/>
+                        <outlet property="threeButton" destination="tma-SP-F98" id="Jmd-LX-FgS"/>
+                        <outlet property="twoButton" destination="zL8-Yt-pjp" id="Vvh-q2-dEm"/>
+                        <outlet property="zeroButton" destination="enx-16-kKz" id="RvZ-JL-6pT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
