@@ -58,16 +58,32 @@
 		D0B2AB82283BA1CF00140F1D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				D0B2AB83283BA1CF00140F1D /* AppDelegate.swift */,
-				D0B2AB85283BA1CF00140F1D /* SceneDelegate.swift */,
+				D0F6379828414CEF00E866FF /* Sources */,
+				D0F6379628414CA800E866FF /* Controller */,
 				D0B2AB87283BA1CF00140F1D /* ViewController.swift */,
 				D0B2AB89283BA1CF00140F1D /* Main.storyboard */,
-				D0B2AB8C283BA1D000140F1D /* Assets.xcassets */,
 				D0B2AB8E283BA1D000140F1D /* LaunchScreen.storyboard */,
 				D0B2AB91283BA1D000140F1D /* Info.plist */,
-				D0F63794283DF32400E866FF /* Calculator.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		D0F6379628414CA800E866FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0F63794283DF32400E866FF /* Calculator.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0F6379828414CEF00E866FF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0B2AB8C283BA1D000140F1D /* Assets.xcassets */,
+				D0B2AB83283BA1CF00140F1D /* AppDelegate.swift */,
+				D0B2AB85283BA1CF00140F1D /* SceneDelegate.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
