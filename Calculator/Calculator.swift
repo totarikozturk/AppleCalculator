@@ -15,7 +15,7 @@ struct Calculator {
     var mathOperator = ""
     var decimalPressed = false
     
-    mutating func numerButtonPressed (_ number: String) -> String {
+    mutating func numberButtonPressed (_ number: String) -> String {
         if !resultValue.isEmpty {
             self.newValue = number
             self.resultValue = ""
@@ -49,18 +49,22 @@ struct Calculator {
     mutating func equalButtonPressed() -> String {
         self.decimalPressed = false
         
-        let prevDoobleValue = Double(self.previousValue)
-        let newDoobleValue = Double(self.newValue)
+        let prevDoubleValue = Double(self.previousValue)
+        let newDoubleValue = Double(self.newValue)
         
         switch self.mathOperator {
         case "+" :
-            resultValue = String(format: "%g", (prevDoobleValue! + newDoobleValue!))
+          //  resultValue = String(format: "%f", (prevDoubleValue! + newDoubleValue!)) // convert result format 0.00
+            resultValue = String(format: "%g", (prevDoubleValue! + newDoubleValue!))   // convert result format normal
         case "-" :
-            resultValue = String(format: "%g", (prevDoobleValue! - newDoobleValue!))
+         //   resultValue = String(format: "%f", (prevDoubleValue! - newDoubleValue!)) // convert result format 0.00
+            resultValue = String(format: "%g", (prevDoubleValue! - newDoubleValue!))   // convert result format normal
         case "X" :
-            resultValue = String(format: "%g", (prevDoobleValue! * newDoobleValue!))
+         //   resultValue = String(format: "%f", (prevDoubleValue! * newDoubleValue!)) // convert result format 0.00
+            resultValue = String(format: "%g", (prevDoubleValue! * newDoubleValue!))   // convert result format normal
         case "/" :
-            resultValue = String(format: "%g", (prevDoobleValue! / newDoobleValue!))
+          //  resultValue = String(format: "%f", (prevDoubleValue! / newDoubleValue!))  // convert result format 0.00
+            resultValue = String(format: "%g", (prevDoubleValue! / newDoubleValue!))    // convert result format normal
         default:
             self.resultValue = self.newValue
         }
@@ -82,8 +86,9 @@ struct Calculator {
             return "0"
         } else {
             let resultDoubleValue = Double(currentValue)!
-            let reversedValıe = resultDoubleValue * -1.0
-            self.resultValue = String(format: "%g", reversedValıe)
+            let reversedValue = resultDoubleValue * -1.0
+           // self.resultValue = String(format: "%.2f", reversedValue) // convert result format 0.00
+            self.resultValue = String(format: "%g", reversedValue)     // convert result format normal
             return self.resultValue
         }
     }
@@ -93,8 +98,9 @@ struct Calculator {
             return "0"
         } else {
             let resultDoubleValue = Double(currentValue)!
-            let reversedValıe = resultDoubleValue * 0.01
-            self.resultValue = String(format: "%g", reversedValıe)
+            let reversedValue = resultDoubleValue * 0.01
+            //self.resultValue = String(format: "%.2f", reversedValue)  // convert result format 0.00
+            self.resultValue = String(format: "%g", reversedValue)      // convert result format normal
             return self.resultValue
         }
     }
