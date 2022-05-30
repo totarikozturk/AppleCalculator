@@ -26,6 +26,7 @@ struct Calculator {
                     self.decimalPressed = true
                 }
             }else {
+                self.newValue = ""
                 self.newValue += number
             }
         }
@@ -33,12 +34,14 @@ struct Calculator {
     }
     
     mutating func mathOperatorPressed (_ mathOperator: String) -> String {
+        print(resultValue)
         if resultValue.isEmpty {
             self.previousValue = self.newValue
         } else {
             self.previousValue = self.resultValue
+            self.newValue = ""
         }
-        self.newValue = ""
+        self.newValue = resultValue
         self.decimalPressed = false
         self.mathOperator = mathOperator
         self.resultValue = ""
@@ -54,16 +57,12 @@ struct Calculator {
         if prevDoubleValue != nil && newDoubleValue != nil {
             switch self.mathOperator {
             case "+" :
-                // resultValue = String(format: "%f", (prevDoubleValue! + newDoubleValue!)) // convert result format 0.00
                 resultValue = String(format: "%g", (prevDoubleValue! + newDoubleValue!))   // convert result format normal
             case "-" :
-                // resultValue = String(format: "%f", (prevDoubleValue! - newDoubleValue!)) // convert result format 0.00
                 resultValue = String(format: "%g", (prevDoubleValue! - newDoubleValue!))   // convert result format normal
             case "X" :
-                //  resultValue = String(format: "%f", (prevDoubleValue! * newDoubleValue!)) // convert result format 0.00
                 resultValue = String(format: "%g", (prevDoubleValue! * newDoubleValue!))   // convert result format normal
             case "/" :
-                // resultValue = String(format: "%f", (prevDoubleValue! / newDoubleValue!))  // convert result format 0.00
                 resultValue = String(format: "%g", (prevDoubleValue! / newDoubleValue!))    // convert result format normal
             default:
                 self.resultValue = self.newValue
@@ -88,8 +87,7 @@ struct Calculator {
         } else {
             let resultDoubleValue = Double(currentValue)!
             let reversedValue = resultDoubleValue * -1.0
-            //self.resultValue = String(format: "%.2f", reversedValue) // convert result format 0.00
-            self.resultValue = String(format: "%g", reversedValue)     // convert result format normal
+            self.resultValue = String(format: "%g", reversedValue)
             return self.resultValue
         }
     }
@@ -100,42 +98,8 @@ struct Calculator {
         } else {
             let resultDoubleValue = Double(currentValue)!
             let reversedValue = resultDoubleValue * 0.01
-            // self.resultValue = String(format: "%.2f", reversedValue)  // convert result format 0.00
-            self.resultValue = String(format: "%g", reversedValue)      // convert result format normal
+            self.resultValue = String(format: "%g", reversedValue)
             return self.resultValue
         }
     }
-    
-    func convertStringWithSeperator(_ num: String) -> String {
-        var formatter: NumberFormatter {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .decimal
-            formatter.groupingSeparator = ","
-            return formatter
-        }
-        
-        /*  let amount = Double(calculator.plusminusPressed(resultLabel.text ?? "0"))
-         let formattedString = formatter.string(for: amount)
-         resultLabel.text = formattedString */
-        
-        let amount = Double(num)
-        let number = formatter.string(for: amount)!
-        return number
-    }
-    
-    func convertStringWithOutSeperator(_ num: String) -> String {
-        /*   var formatter: NumberFormatter {
-         let formatter = NumberFormatter()
-         formatter.numberStyle = .decimal
-         formatter.groupingSeparator = ""
-         return formatter
-         }
-         let amount = Double(num)
-         let number = formatter.string(for: amount)!
-         */
-        let number = num
-        let myInt = number.filter { ("0"..."9").contains($0) }
-        return myInt
-    }
-    
 }
