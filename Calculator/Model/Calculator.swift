@@ -34,7 +34,6 @@ struct Calculator {
     }
     
     mutating func mathOperatorPressed (_ mathOperator: String) -> String {
-        print(resultValue)
         if resultValue.isEmpty {
             self.previousValue = self.newValue
         } else {
