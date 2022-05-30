@@ -19,23 +19,18 @@ class ViewController: UIViewController {
     @IBAction func clearPressed(_ sender: UIButton) {
         resultLabel.text = calculator.clearButtonPressed()
     }
-    
     @IBAction func plusMinusPressed(_ sender: UIButton) {
         resultLabel.text = calculator.plusminusPressed(resultLabel.text ?? "0")
     }
-    
     @IBAction func percentPressed(_ sender: UIButton) {
         resultLabel.text = calculator.percentPressed(resultLabel.text ?? "0")
     }
-    
     @IBAction func numberPressed(_ sender: UIButton) {
         resultLabel.text = calculator.numberButtonPressed(sender.currentTitle!)
     }
-    
     @IBAction func mathButtonPressed(_ sender: UIButton) {
         resultLabel.text = calculator.mathOperatorPressed(sender.currentTitle!)
     }
-    
     @IBAction func equalPressed(_ sender: UIButton) {
         resultLabel.text = calculator.equalButtonPressed()
     }

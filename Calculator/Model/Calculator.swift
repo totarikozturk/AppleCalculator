@@ -56,13 +56,13 @@ struct Calculator {
         if prevDoubleValue != nil && newDoubleValue != nil {
             switch self.mathOperator {
             case "+" :
-                resultValue = String(format: "%g", (prevDoubleValue! + newDoubleValue!))   // convert result format normal
+                resultValue = String(format: "%g", (prevDoubleValue! + newDoubleValue!))
             case "-" :
-                resultValue = String(format: "%g", (prevDoubleValue! - newDoubleValue!))   // convert result format normal
+                resultValue = String(format: "%g", (prevDoubleValue! - newDoubleValue!))
             case "X" :
-                resultValue = String(format: "%g", (prevDoubleValue! * newDoubleValue!))   // convert result format normal
+                resultValue = String(format: "%g", (prevDoubleValue! * newDoubleValue!))
             case "/" :
-                resultValue = String(format: "%g", (prevDoubleValue! / newDoubleValue!))    // convert result format normal
+                resultValue = String(format: "%g", (prevDoubleValue! / newDoubleValue!))    
             default:
                 self.resultValue = self.newValue
             }
