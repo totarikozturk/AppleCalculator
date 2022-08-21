@@ -39,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D052AA2728B27CAE0071D6AA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D0B2AB83283BA1CF00140F1D /* AppDelegate.swift */,
+				D0B2AB85283BA1CF00140F1D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		D0B2AB77283BA1CF00140F1D = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +67,10 @@
 		D0B2AB82283BA1CF00140F1D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				D0F6379A28414EF200E866FF /* Model */,
-				D0F6379828414CEF00E866FF /* Sources */,
+				D052AA2728B27CAE0071D6AA /* App */,
 				D0F6379628414CA800E866FF /* Controller */,
-				D0B2AB89283BA1CF00140F1D /* Main.storyboard */,
-				D0B2AB8E283BA1D000140F1D /* LaunchScreen.storyboard */,
-				D0B2AB91283BA1D000140F1D /* Info.plist */,
+				D0F6379A28414EF200E866FF /* Model */,
+				D0F6379828414CEF00E866FF /* Resources */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -71,19 +78,20 @@
 		D0F6379628414CA800E866FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0B2AB8E283BA1D000140F1D /* LaunchScreen.storyboard */,
+				D0B2AB89283BA1CF00140F1D /* Main.storyboard */,
 				D0B2AB87283BA1CF00140F1D /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D0F6379828414CEF00E866FF /* Sources */ = {
+		D0F6379828414CEF00E866FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				D0B2AB8C283BA1D000140F1D /* Assets.xcassets */,
-				D0B2AB83283BA1CF00140F1D /* AppDelegate.swift */,
-				D0B2AB85283BA1CF00140F1D /* SceneDelegate.swift */,
+				D0B2AB91283BA1D000140F1D /* Info.plist */,
 			);
-			path = Sources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D0F6379A28414EF200E866FF /* Model */ = {
@@ -333,7 +341,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,7 +370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
